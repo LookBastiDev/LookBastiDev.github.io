@@ -2,9 +2,8 @@ import { Brain, Code, Cloud, Terminal, Database, Layout, Server, Cpu } from "luc
 
 export const personalData = {
   name: "Bastián Cerda",
-  role: "Full Stack Developer | AI & Cloud Enthusiast",
-  about: "Estudiante avanzado de Ingeniería en Informática con una fuerte pasión por la arquitectura Cloud y el desarrollo de software escalable. Me fascina la intersección entre el desarrollo web moderno y la Inteligencia Artificial. Aunque sigo perfeccionando mis habilidades, tengo experiencia práctica integrando APIs complejas y construyendo soluciones 'Local-First' que priorizan la privacidad de los datos. Mi objetivo es dominar el stack completo para crear herramientas tecnológicas que resuelvan problemas reales.",
-  location: "La Serena, Chile. Vallenar, Chile. Disponible para traslado Santiago - Chile.",  
+  role: "AI Automation Builder | Full Stack Developer", 
+  location: "La Serena, Chile. Vallenar, Chile. Disponibilidad total en Santiago - Chile.",  
   socials: {
     github: "https://github.com/BastiTrollOne",
     linkedin: "https://www.linkedin.com/in/bastian-cerda-776478244",
@@ -38,6 +37,13 @@ export const skills = [
 
 export const experience = [
   {
+    title: "Desarrollador de IA y Automatización (Práctica)",
+    company: "Bee Fractal SpA",
+    date: "Ene 2026 - 06/Marzo/2026",
+    type: "Práctica Profesional",
+    description: "Liderazgo en el proyecto B-MaiA. Desarrollo de agentes de IA en n8n con lógica de SQL dinámico y procesamiento de archivos binarios en JavaScript.",
+  },
+  {
     title: "Logística y Gestión de Operaciones",
     company: "Los Quebrachos SPA",
     date: "Ene 2022 - Feb 2025",
@@ -54,6 +60,12 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    title: "B-MaiA: Agente Experto Agrícola",
+    tech: ["n8n", "SQL", "JavaScript", "AI Agents", "Knowledge Chains"],
+    desc: "Sistema experto en n8n que automatiza diagnósticos técnicos. Incluye un generador de SQL dinámico y un motor de análisis de audio para transcripciones precisas.",
+    link: "https://github.com/BastiTrollOne" 
+  },
   {
     title: "PrismaFinance (AI Fintech)",
     tech: ["Python", "React", "LangChain", "Neo4j", "OCR"],
