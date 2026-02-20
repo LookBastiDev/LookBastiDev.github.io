@@ -63,7 +63,7 @@ export const projects = [
   {
     title: "B-MaiA: Agente Experto Agrícola",
     tech: ["n8n", "SQL", "JavaScript", "AI Agents", "Knowledge Chains"],
-    desc: "Sistema experto en n8n que automatiza diagnósticos técnicos. Incluye un generador de SQL dinámico y un motor de análisis de audio para transcripciones precisas.",
+    desc: "Sistema experto en n8n que automatiza diagnósticos técnicos. Incluye un generador de SQL dinámico y un motor de análisis de audio para transcripciones precisas. todo incorporandolo en laravel dentro de php",
     link: "https://github.com/LookBastiDev/WorkFlows" 
   },
   {
