@@ -5,7 +5,7 @@ export const personalData = {
   role: "AI Automation Builder | Full Stack Developer", 
   location: "La Serena, Chile. Vallenar, Chile. Disponibilidad total en Santiago - Chile.",  
   socials: {
-    github: "https://github.com/BastiTrollOne",
+    github: "https://github.com/BastiTrollOne" || "https://github.com/LookBastiDev",
     linkedin: "https://www.linkedin.com/in/bastian-cerda-776478244",
     email: "bastiiian.c.b@gmail.com",
     whatsapp: "56984854353"
@@ -64,7 +64,7 @@ export const projects = [
     title: "B-MaiA: Agente Experto Agrícola",
     tech: ["n8n", "SQL", "JavaScript", "AI Agents", "Knowledge Chains"],
     desc: "Sistema experto en n8n que automatiza diagnósticos técnicos. Incluye un generador de SQL dinámico y un motor de análisis de audio para transcripciones precisas.",
-    link: "https://github.com/BastiTrollOne" 
+    link: "https://github.com/LookBastiDev/WorkFlows" 
   },
   {
     title: "PrismaFinance (AI Fintech)",
