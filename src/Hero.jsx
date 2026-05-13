@@ -56,7 +56,7 @@ const Hero = () => {
             <Linkedin size={24} />
           </a>
 
-          {/* WhatsApp (NUEVO) */}
+          {/* WhatsApp */}
           <a 
             href={whatsappLink} 
             target="_blank" 

@@ -2,8 +2,8 @@ import { Brain, Code, Cloud, Terminal, Database, Layout, Server, Cpu } from "luc
 
 export const personalData = {
   name: "Bastián Cerda",
-  role: "AI Automation Builder | Full Stack Developer", 
-  location: "La Serena, Chile. Vallenar, Chile. Disponibilidad total en Santiago - Chile.",  
+  role: "AI Automation Builder | Full Stack Developer",
+  location: "La Serena, Chile. Vallenar, Chile. Disponibilidad total en Santiago - Chile.",
   socials: {
     github: "https://github.com/BastiTrollOne" || "https://github.com/LookBastiDev",
     linkedin: "https://www.linkedin.com/in/bastian-cerda-776478244",
@@ -51,9 +51,9 @@ export const experience = [
     description: "Liderazgo en gestión de inventarios y optimización de rutas de despacho críticas. Desarrollé habilidades clave en resolución de problemas bajo presión y cumplimiento de SLAs.",
   },
   {
-    title: "Co-Founder & Lead AI Architect", 
+    title: "Co-Founder & Lead AI Architect",
     company: "Prisma Finance",
-    date: "2024 - 2025",
+    date: "2025 - 2025",
     type: "Emprendimiento / Proyecto",
     description: "Co-fundé una startup Fintech junto a un equipo de 3 especialistas. Lideré la arquitectura técnica y el desarrollo de IA, logrando llevar el proyecto a ganar el 1er Lugar en Innovación en la UCN Coquimbo.",
   }
@@ -64,7 +64,7 @@ export const projects = [
     title: "B-MaiA: Agente Experto Agrícola",
     tech: ["n8n", "SQL", "JavaScript", "AI Agents", "Knowledge Chains"],
     desc: "Sistema experto en n8n que automatiza diagnósticos técnicos. Incluye un generador de SQL dinámico y un motor de análisis de audio para transcripciones precisas. todo incorporandolo en laravel dentro de php",
-    link: "https://github.com/LookBastiDev/WorkFlows" 
+    link: "https://github.com/LookBastiDev/WorkFlows"
   },
   {
     title: "PrismaFinance (AI Fintech)",
@@ -96,9 +96,9 @@ export const smallProjects = [
 export const education = [
   {
     institution: "INACAP",
-    degree: "Ingeniería en Informática",
-    date: "2022 - Presente (Egreso 2025)",
-    desc: "Especialización en Arquitecturas Cloud, Seguridad Informática y Desarrollo de Software Escalable."
+    degree: "Ingeniería en Informática (Titulado)",
+    date: "2022 - 2026",
+    desc: "Especialización en Arquitecturas Cloud, Arquitectura de IA y Desarrollo de Software Escalable."
   }
 ];
 
