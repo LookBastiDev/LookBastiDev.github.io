@@ -2,12 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-  const techSkills = [
+  // Tu Stack Principal (Las que tienen barra de progreso animada)
+  const mainTech = [
     { name: "Python (FastAPI)", level: 90, color: "bg-blue-500" },
     { name: "Automatización (n8n)", level: 85, color: "bg-orange-500" },
     { name: "React & Node.js", level: 80, color: "bg-cyan-400" },
     { name: "SQL (PostgreSQL)", level: 85, color: "bg-emerald-500" },
     { name: "IA & Arquitecturas RAG", level: 75, color: "bg-purple-500" }
+  ];
+
+  // TODO TU ARSENAL SECUNDARIO (Agrega aquí todo lo que sabes usar)
+  const additionalTech = [
+    "Docker", "AWS (EC2, S3)", "Git / GitHub", "Linux (Ubuntu)",
+    "PHP / Laravel", "Tailwind CSS", "MongoDB", "Supabase",
+    "Web Scraping", "APIs REST", "Figma", "Metodologías Ágiles"
   ];
 
   const powerSkills = [
@@ -62,21 +70,22 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
-          {/* Columna Izquierda: Hard Skills (Barras de progreso animadas) */}
+          {/* COLUMNA IZQUIERDA: Stack Tecnológico Completo */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-8 rounded-3xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50"
+            className="p-8 rounded-3xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50 flex flex-col h-full"
           >
             <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
               <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
-              Stack Tecnológico
+              Especialidad Principal
             </h3>
             
-            <div className="space-y-6">
-              {techSkills.map((skill, index) => (
+            {/* Barras animadas (Las Core) */}
+            <div className="space-y-6 mb-8">
+              {mainTech.map((skill, index) => (
                 <div key={index} className="group">
                   <div className="flex justify-between text-sm font-medium text-slate-300 mb-2">
                     <span>{skill.name}</span>
@@ -95,9 +104,28 @@ const Skills = () => {
                 </div>
               ))}
             </div>
+
+            {/* NUEVA SECCIÓN: Ecosistema Adicional (Píldoras) */}
+            <div className="mt-auto pt-6 border-t border-slate-700/50">
+              <h4 className="text-xs font-semibold text-slate-400 mb-4 uppercase tracking-wider flex items-center gap-2">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                Ecosistema y Herramientas
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {additionalTech.map((tech, index) => (
+                  <span 
+                    key={index} 
+                    className="px-3 py-1.5 text-xs font-medium text-slate-300 bg-slate-900/60 border border-slate-700 rounded-lg hover:border-blue-500/50 hover:text-blue-300 hover:bg-slate-800 transition-all cursor-default"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
           </motion.div>
 
-          {/* Columna Derecha: Power Skills (Cajas de cristal interactivo) */}
+          {/* COLUMNA DERECHA: Power Skills */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -114,7 +142,7 @@ const Skills = () => {
               <motion.div 
                 key={index}
                 whileHover={{ scale: 1.02, x: 10 }}
-                className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50 flex gap-4 hover:bg-slate-800/80 hover:border-slate-600 transition-all duration-300 cursor-default"
+                className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-slate-700/50 flex gap-4 hover:bg-slate-800/80 hover:border-slate-600 transition-all duration-300 cursor-default h-[calc(33%-1rem)]"
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-slate-900/50 border border-slate-700 flex items-center justify-center shadow-inner">
                   {skill.icon}
