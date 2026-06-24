@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
-  // Estado para controlar la ventanilla (modal) de contacto
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const containerVariants = {
@@ -41,18 +40,19 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Título Principal con el NOMBRE ANIMADO igual que el botón */}
-        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-extrabold text-slate-800 tracking-tight mb-8 flex flex-col items-center gap-4">
+        {/* TÍTULO PRINCIPAL: Letras con brillo difuminado en movimiento */}
+        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-extrabold text-slate-800 tracking-tight mb-8 flex flex-col items-center gap-2">
           <span>Hola, soy</span>
-          {/* El contenedor con el borde rotativo para tu nombre */}
-          <span className="relative inline-flex overflow-hidden rounded-3xl p-[3px] shadow-sm">
-            <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e2e8f0_0%,#2563eb_50%,#e2e8f0_100%)]" />
-            <span className="relative inline-flex items-center justify-center rounded-[22px] bg-slate-50 px-8 py-2 backdrop-blur-3xl">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
-                Bastián Cerda
-              </span>
-            </span>
-          </span>
+          
+          <motion.span 
+            className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-400 to-blue-600 drop-shadow-[0_0_15px_rgba(79,70,229,0.4)]"
+            style={{ backgroundSize: "200% auto" }}
+            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+            transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+          >
+            Bastián Cerda
+          </motion.span>
+
         </motion.h1>
 
         {/* Propuesta de Valor */}
@@ -60,13 +60,13 @@ const Hero = () => {
           Ingeniero en Informática especializado en el desarrollo Full Stack, arquitecturas Cloud y orquestación avanzada de flujos con IA.
         </motion.p>
 
-        {/* BOTÓN INNOVADOR MODIFICADO */}
+        {/* Botón Innovador */}
         <motion.div variants={itemVariants} className="flex justify-center">
           <motion.button
             onClick={() => setIsModalOpen(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative inline-flex h-16 w-full sm:w-auto overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-50 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300"
+            className="group relative inline-flex h-16 w-full sm:w-auto overflow-hidden rounded-full p-[2px] focus:outline-none shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300"
           >
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e2e8f0_0%,#2563eb_50%,#e2e8f0_100%)]" />
             <span className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-white/95 px-8 py-3 text-base font-semibold text-slate-800 backdrop-blur-3xl transition-all duration-300 group-hover:bg-slate-50 group-hover:text-blue-600">
@@ -89,17 +89,16 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm px-4"
-            onClick={() => setIsModalOpen(false)} // Cierra el modal si haces clic fuera de la caja
+            onClick={() => setIsModalOpen(false)}
           >
             <motion.div 
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              onClick={(e) => e.stopPropagation()} // Evita que al hacer clic dentro de la caja se cierre
+              onClick={(e) => e.stopPropagation()}
               className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl p-8 overflow-hidden"
             >
-              {/* Botón de cerrar (X) */}
               <button 
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
@@ -114,7 +113,6 @@ const Hero = () => {
                 <p className="text-slate-500">¿Tienes un proyecto en mente o una oportunidad de equipo? Hablemos.</p>
               </div>
 
-              {/* Botones de Redes/Contacto */}
               <div className="flex flex-col gap-4">
                 {/* 1. WhatsApp */}
                 <a 
@@ -129,15 +127,16 @@ const Hero = () => {
                   <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                 </a>
 
-                {/* 2. Correo Electrónico */}
+                {/* 2. Correo Electrónico (Vía Web de Gmail - Reducción de Fricción) */}
                 <a 
-                  href="mailto:bastiiian.c.b@gmail.com" 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=bastiiian.c.b@gmail.com&su=Contacto%20desde%20Portafolio" 
+                  target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 w-full p-4 rounded-2xl bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold group"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  Correo Electrónico
+                  Abrir Gmail en Web
                   <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                 </a>
 
