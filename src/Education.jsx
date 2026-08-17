@@ -88,6 +88,50 @@ const Education = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" />
         </svg>
       )
+    },
+    {
+      id:9,
+      title: "Curso LLM-LangChain",
+      institution: "Alura Latam",
+      pdfFile: "/Cert_curso llm - langchain - ALURA.pdf",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" />
+        </svg>
+    )
+    },
+    {
+      id:10,
+      title: "Curso IA para Desarrolladores",
+      institution: "Alura Latam",
+      pdfFile: "/Cert_IA PARA DESARROLLADORES - ALURA.pdf",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" />
+        </svg>
+      )
+    },
+    {
+      id:11,
+      title: "Curso Inmersión Agentes de IA N8N",
+      institution: "Alura Latam",
+      pdfFile: "/Certi_INMERSION AGENTES DE IA N8N.pdf",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" />
+        </svg>
+      )
+    },
+    {
+      id:12,
+      title: "Curso Orquestación con IA Generativa",
+      institution: "Alura Latam",
+      pdfFile: "/CERT_ORQUESTACION_CON_IA_GENERATIVA- ALURA.pdf",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" />
+        </svg>
+      )
     }
   ];
 
